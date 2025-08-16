@@ -65,12 +65,16 @@ export const ModalSlider: FC<IModalSliderProps> = ({
       <div
         className={styles.modalContainer}
         onClick={(e) => e.stopPropagation()}
-        {...bind}
       >
         <div className={styles.carousel}>
           <div
             className={styles.carouselTrack}
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            style={{
+              transform: `translateX(-${current * 100}%)`,
+              touchAction: 'pan-y',
+              userSelect: 'none',
+            }}
+            {...bind}
           >
             {photos.map((photo, index) => (
               <div key={index} className={styles.carouselSlide}>

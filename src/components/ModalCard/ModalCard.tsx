@@ -18,6 +18,7 @@ export const ModalCard: FC<IModalCardProps> = ({ photo, onClose }) => {
         alt={photo.user.name}
         className={styles.image}
         draggable={false}
+        onDragStart={(e) => e.preventDefault()}
       />
 
       <div className={styles.info}>

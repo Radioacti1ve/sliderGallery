@@ -3,7 +3,6 @@ import { useRef, PointerEvent } from 'react';
 export function useSwipe(onLeft: () => void, onRight: () => void) {
   const startX = useRef(0);
   const active = useRef(false);
-  console.log("Iworking")
 
   const bind = {
     onPointerDown: (e: PointerEvent) => {

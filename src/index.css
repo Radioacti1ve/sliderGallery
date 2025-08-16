@@ -16,3 +16,7 @@ code {
 h1 {
   color: white;
 }
+
+p {
+  margin: 0;
+}

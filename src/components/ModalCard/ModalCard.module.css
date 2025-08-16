@@ -3,11 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
 }
 
 .close {
   position: absolute;
-  top: 20px;
+  top: -20px;
   right: 0;
   font-size: 32px;
   color: white;
@@ -29,7 +30,6 @@
 }
 
 .info {
-  margin-top: 10px;
   color: white;
   text-align: center;
   font-size: 14px;
