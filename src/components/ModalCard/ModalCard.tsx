@@ -1,18 +1,6 @@
 import { FC } from 'react';
 import styles from './ModalCard.module.css';
-
-interface IModalCardProps {
-  photo: {
-    urls: {
-      regular: string;
-    };
-    user: {
-      name: string;
-    };
-    likes: number;
-  };
-  onClose: () => void;
-}
+import { IModalCardProps } from '../../types';
 
 export const ModalCard: FC<IModalCardProps> = ({ photo, onClose }) => {
   return (
@@ -29,7 +17,8 @@ export const ModalCard: FC<IModalCardProps> = ({ photo, onClose }) => {
         src={photo.urls.regular}
         alt={photo.user.name}
         className={styles.image}
-        loading="lazy"
+        draggable={false}
+        onDragStart={(e) => e.preventDefault()}
       />
 
       <div className={styles.info}>

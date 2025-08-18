@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { IModalSliderProps } from '../../types';
 import { ModalCard } from '../ModalCard/ModalCard';
 import styles from './ModalSlider.module.css';
+import { useSwipe } from '../../hooks/useSwipe';
 
 export const ModalSlider: FC<IModalSliderProps> = ({
   photos,
@@ -54,6 +55,8 @@ export const ModalSlider: FC<IModalSliderProps> = ({
     };
   }, []);
 
+  const { bind } = useSwipe(goNext, goPrev);
+
   return (
     <div
       className={`${styles.modal} ${isOpen ? styles.open : ''}`}
@@ -66,7 +69,12 @@ export const ModalSlider: FC<IModalSliderProps> = ({
         <div className={styles.carousel}>
           <div
             className={styles.carouselTrack}
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            style={{
+              transform: `translateX(-${current * 100}%)`,
+              touchAction: 'pan-y',
+              userSelect: 'none',
+            }}
+            {...bind}
           >
             {photos.map((photo, index) => (
               <div key={index} className={styles.carouselSlide}>

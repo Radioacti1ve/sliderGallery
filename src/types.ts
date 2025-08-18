@@ -27,3 +27,16 @@ export interface IModalSliderProps {
   currentIndex: number;
   onClose: () => void;
 }
+
+export interface IModalCardProps {
+  photo: {
+    urls: {
+      regular: string;
+    };
+    user: {
+      name: string;
+    };
+    likes: number;
+  };
+  onClose: () => void;
+}
