@@ -30,7 +30,7 @@ export const Gallery: FC = () => {
 
   const handleScroll = useCallback(() => {
     if (
-      window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000 &&
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 1500 &&
       !loading &&
       hasMore
     ) {
@@ -63,7 +63,7 @@ export const Gallery: FC = () => {
 
   return (
     <div className={styles.gallery}>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3, 900: 4 }}>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 250: 2, 350: 3, 750: 4, 900: 5, 1600: 6 }}>
         <Masonry>
           {photos.map((photo) => (
             <Card key={photo.id} photo={photo} openModal={() => openModal(photo.id)} />
