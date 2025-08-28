@@ -1,8 +1,8 @@
 import axios from 'axios';
 import { UnsplashPhoto } from '../types';
 
-const accessKey = process.env.REACT_APP_ACCESS_KEY;
-const URL = process.env.REACT_APP_BASE_URL;
+const accessKey = process.env.ACCESS_KEY;
+const URL = process.env.BASE_URL;
 
 if (!accessKey) {
   console.error('Unsplash API key is missing. Check your .env file.');
