@@ -1,0 +1,38 @@
+.gallery {
+  width: 100%;
+  max-width: 1400px;
+
+  column-gap: 16px;
+  column-count: 1;
+}
+
+.item {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+
+  margin-bottom: 16px;
+  display: block;
+}
+
+.status {
+  margin: 16px auto 32px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+@media (min-width: 600px) {
+  .gallery {
+    column-count: 2;
+  }
+}
+@media (min-width: 900px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery {
+    column-count: 4;
+  }
+}
