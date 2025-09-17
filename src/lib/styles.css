@@ -1,0 +1,17 @@
+:root {
+  --ra-color-white: #ffffff;
+  --ra-color-black: #000000;
+
+  --ra-text-primary: var(--ra-color-white);
+
+  --ra-modal-bg: rgba(0, 0, 0, 0.9);
+  --ra-modal-info-color: var(--ra-color-white);
+
+  --ra-close-bg: rgba(0, 0, 0, 0.6);
+  --ra-close-color: var(--ra-color-white);
+
+  --ra-nav-btn-bg: rgba(255, 255, 255, 0.1);
+  --ra-nav-btn-bg-hover: rgba(255, 255, 255, 0.2);
+  --ra-nav-btn-bg-disabled: rgba(255, 255, 255, 0.05);
+  --ra-nav-btn-color: var(--ra-color-white);
+}

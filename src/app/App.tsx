@@ -1,10 +1,9 @@
 import { FC, useCallback, useState } from 'react';
 import './App.css';
-import { Gallery } from './components/Gallery';
-import { ModalSlider, ModalCard } from '../lib'; // <— добавили ModalCard
+import { Gallery } from './components';
+import { ModalSlider, ModalCard } from '../lib';
 import type { IUnsplashPhoto } from './types';
-import { useGallery } from './hooks/useGallery';
-import { useInfiniteScroll } from './hooks/useInfiniteScroll';
+import { useGallery, useInfiniteScroll } from './hooks';
 
 const App: FC = () => {
   const [modalOpen, setModalOpen] = useState(false);

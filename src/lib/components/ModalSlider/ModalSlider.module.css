@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--ra-modal-bg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,9 +55,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--ra-nav-btn-bg);
+  color: var(--ra-nav-btn-color);
   border: none;
-  color: white;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -75,14 +75,14 @@
 }
 
 .navButton:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--ra-nav-btn-bg-hover);
   transform: translateY(-50%) scale(1.1);
 }
 
 .navButton:disabled {
   opacity: 0.3;
   cursor: not-allowed;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--ra-nav-btn-bg-disabled);
 }
 
 .navButton:disabled:hover {

@@ -15,8 +15,8 @@
   right: 8px;
   font-size: 24px;
   line-height: 1;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
+  color: var(--ra-close-color);
+  background: var(--ra-close-bg);
   border: none;
   border-radius: 50%;
   width: 32px;
@@ -51,7 +51,7 @@
 }
 
 .info {
-  color: white;
+  color: var(--ra-modal-info-color);
   text-align: center;
   font-size: 14px;
 }
